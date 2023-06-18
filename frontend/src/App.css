@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "haxrcorp";
+  src: url("./assets/haxrcorpttf.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+.mainArea {
+  flex: 1;
+  background-color: #000000;
+  color: white;
+  position: relative;
+}
+
+.toggle-switch-container {
+  margin: 10px 0 0 10px;
+}
+
+.icon-switch {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.icon-switch.clicked {
+  color: cyan;
+}
+
+.ai-image-container img {
+  height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+  border-radius: 8px;
+  border: 2px solid rgba(134, 134, 134, 0.5);
+  box-shadow: 5px 5px 10px rgba(167, 165, 165, 0.2);
+}
+
+.input-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mic-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #101010;
+  padding: 10px 13px;
+  border-radius: 42%;
+  margin-right: 30px;
+  margin-bottom: 7px;
+  border: 2px solid rgba(134, 134, 134, 0.5);
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.mic-box:hover {
+  background-color: #222;
+}
+
+.mic-box.clicked {
+  background-color: #333;
+}
+
+.mic {
+  opacity: .5;
+}
+
+.input-form {
+  display: flex;
+  flex: 1;
+}
+
+.input-text {
+  opacity: 0.5;
+  background-color: unset;
+  font: 16px "Ubuntu Mono", monospace;
+  color: #868686;
+  height: 100%;
+  width: 90%;
+  padding: 7px;
+  border-style: solid;
+  border-radius: 15px;
+  text-align: left;
+  outline: 0;
+  padding-bottom: 0, 5em;
+  margin: 0 20px 0 auto;
+  margin-bottom: 0.4em;
+}
+
+.chatLog {
+  height: 100vh;
+  position: relative;
+  top: 0;
+  width: 380px;
+  right: 0;
+  font-size: 0.6em;
+  background-color: #171717;
+  overflow-y: scroll;
+  padding: 10px 5px 0px 13px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 40px rgba(167, 165, 165, 0.2);
+}
+
+.chatLog::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatLog::-webkit-scrollbar-track {
+  background-color: #171717;
+}
+
+.chatLog::-webkit-scrollbar-thumb {
+  background-color: #868686;
+  border-radius: 4px;
+}
+
+.chatLog::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+
+.chatUser,
+.chatBot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-shrink: 0;
+  word-wrap: break-word;
+  margin-bottom: 6px;
+  padding: 10px;
+  max-width: 355px;
+  border-radius: 10px;
+  background-color: rgba(38, 38, 38, 0.8);
+}
+
+.profile-picture-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1px;
+  height: 30px; 
+  width: 30px; 
+  background-color: #404040; 
+  border-radius: 50%;
+}
+
+.profile-picture {
+  color: white; 
+  font-size: 14px; 
+}
+
+.message-container {
+  color: rgb(199, 196, 196);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  font: 10px Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding-left: 10px;
+  text-align: left;
+  height: 100%; 
+}
