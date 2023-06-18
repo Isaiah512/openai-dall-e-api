@@ -5,3 +5,5 @@ package-lock.json
 frontend/node_modules
 frontend/package.json
 frontend/package-lock.json
+frontend/.eslintrc.cjs
+frontend/vite.config.js
